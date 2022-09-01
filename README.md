@@ -9,3 +9,4 @@ A la vez, prefiero usar mi portátil porque me facilita poner acentos áéíóú
 
 Sin embargo, me dicen que no son caracteres de ASCII. Que lastima. No tiene sentido que hay tantas caracteres inutiles y no hay letras con acentos. 
 
+Por fin estoy aqui yo samuelfyneweverucsp! Encontre como cambiar el usuario. :)
