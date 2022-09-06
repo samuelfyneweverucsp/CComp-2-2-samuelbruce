@@ -14,9 +14,9 @@
 using namespace std;
 
 int main () {
-    cout << "  CCC   +     +"
-    cout << " C      +     +"
-    cout << "C     +++++ +++++"
-    cout << " C      +     +"
-    cout << "  CCC   +     +"
+    cout << "  CCC   +     +" << endl;
+    cout << " C      +     +" << endl;
+    cout << "C     +++++ +++++" << endl;
+    cout << " C      +     +" << endl;
+    cout << "  CCC   +     +" << endl;
 }

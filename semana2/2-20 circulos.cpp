@@ -1,7 +1,7 @@
 /**
  * @file circulos.cpp
  * @author samuelfyneweverucsp (samuel.fynewever@ucsp.edu.pe)
- * @brief dado el radio de un circulo, imprime su diametro, circunferencia, y area
+ * @brief ejercicio 2-20: dado el radio de un circulo, imprime su diametro, circunferencia, y area
  * @version 0.1
  * @date 2022-09-04
  * 
@@ -18,7 +18,7 @@ int main () {
 
     cout << "Ingresa radio del circulo:" << endl;
     cin >> radio;
-    cout << "Diametro del circulo: " << radio * 2; << "\nCircunferencia del circulo: " << radio * 2 * 3.14159; << "\nArea del circulo: " << radio * radio * 3.14159; << endl;
+    cout << "Diametro del circulo: " << radio * 2 << "\nCircunferencia del circulo: " << radio * 2 * 3.14159 << "\nArea del circulo: " << radio * radio * 3.14159 << endl;
 
 
 }
