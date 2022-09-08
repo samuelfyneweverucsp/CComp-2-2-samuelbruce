@@ -16,9 +16,9 @@ int main() {
 
     float costaEnSoles{0};
 
-    cout << "Ingresa millas que maneja: " << endl;
+    cout << "Ingresa kilometros que maneja: " << endl;
     cin >> kmDriven;
-    cout << "Ingresa precio de gasolina en dolares cada galon; " << endl;
+    cout << "Ingresa precio de gasolina en soles cada litro: " << endl;
     cin >> solesCadaLitro; 
     cout << "Ingresa km cada litro: " << endl; 
     cin >> kmCadaLitro;
@@ -29,7 +29,7 @@ int main() {
 
     costaEnSoles = (kmDriven / kmCadaLitro * solesCadaLitro) + parkingFeesPerDay + tollsPerDay;
 
-    cout << "Manejar te cuesta cada dia: " << costaEnSoles << endl;
+    cout << "Manejar le cuesta cada dia: S/" << costaEnSoles << endl;
 
 }
  

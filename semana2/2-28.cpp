@@ -17,11 +17,11 @@ int main () {
     if (numero > 9999) {cout << "No son de 4 digitos" << endl;}
     else {
         digito1 = numero % 10;
-        digito2 = numero % 100 - digito1;
-        digito3 = numero % 1000 - numero % 100;
-        digito4 = numero % 10000 - numero % 1000;
+        digito2 = (numero % 100 - digito1)/10;
+        digito3 = (numero % 1000 - numero % 100)/100;
+        digito4 = (numero % 10000 - numero % 1000)/1000;
 
-        cout << "Los digitos, al reves, son:" << digito4 << "  " << digito3 << "  "
-        << digito2 << "  " << digito1 << "  " << endl;
+        cout << "Los digitos, al reves, son: " << digito1 << "  " << digito2 << "  "
+        << digito3 << "  " << digito4 << "  " << endl;
     }
 }

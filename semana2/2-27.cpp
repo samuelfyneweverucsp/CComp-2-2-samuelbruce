@@ -13,7 +13,7 @@ int main() {
 
     std::cin >> myChar;
 
-    cout << static_cast<int>(myChar);
+    cout << "Su codigo ASCII es: " << static_cast<int>(myChar) << endl;
 
 };
  

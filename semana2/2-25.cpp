@@ -18,9 +18,9 @@ int main() {
     cout << "Ingresa 3r entero: " << endl;
     cin >> num3;
     
-    if (num1 % num3 == 0) {cout << "Num 1 es factor de num 3" << endl;
+    if (num3 % num1 == 0) {cout << "Num 1 es factor de num 3" << endl;
     } else {cout << "Num 1 no es factor de num 3" << endl;}
-    if (num2 % num3 == 0) {cout << "Num 2 es factor de num 3" << endl;
+    if (num3 % num2 == 0) {cout << "Num 2 es factor de num 3" << endl;
     } else {cout << "Num 2 no es factor de num 3" << endl;}
 
 }

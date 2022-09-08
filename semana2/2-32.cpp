@@ -24,7 +24,7 @@ int main() {
     MHR3 = MHR2 - 1;
     MHR4 = 211 - 0.64 * edad;
 
-    cout << "MHR1: " << MHR1 << "\nMHR2: " << MHR2 << "\nMHR3: " << MHR3 << endl;
+    cout << "MHR1: " << MHR1 << "\nMHR2: " << MHR2 << "\nMHR3: " << MHR3 << "\nMHR4: " << MHR4 << endl;
     if ((MHR1 > MHR2) && (MHR1 > MHR3) && (MHR1 > MHR4)) {mayor = MHR1;}
     else if ((MHR2 > MHR3) && (MHR2 > MHR4)) {mayor = MHR2;}
     else if (MHR3 > MHR4) {mayor = MHR3;}
