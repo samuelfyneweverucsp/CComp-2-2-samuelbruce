@@ -55,7 +55,7 @@ int main () {
     cout << "\n\nIngresa cuanto retirar de account2: " << endl;
     cin >> withdrawalAmount;
     cout << "Retirando S/" << withdrawalAmount << " del balance de account2...";
-    account2.deposit(withdrawalAmount); // agregar al balance de account2
+    account2.withdraw(withdrawalAmount); // agregar al balance de account2
 
     // mostrar los balances una vez mas
     cout << "\n\naccount1: " << account1.getName() << " tiene balance de S/" << account1.getBalance(); 
