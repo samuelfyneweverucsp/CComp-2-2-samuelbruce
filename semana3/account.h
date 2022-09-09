@@ -33,6 +33,14 @@ class Account {
             }
         }
 
+        void withdraw(int withdrawalAmount) {
+            if (withdrawalAmount < 0) {std::cout << "No se puede retirar un valor negativo" << std::endl;} 
+            else if (withdrawalAmount > balanceDataMember) {std::cout << "No tienes tanta plata, asi que no puedes retirar esa cantidad! No retirando nada" << std::endl;}
+            else {
+                balanceDataMember = balanceDataMember - withdrawalAmount;
+            }
+        }
+
         // funcion que retorna el balance del cuenta
         int getBalance() const {
             return balanceDataMember;

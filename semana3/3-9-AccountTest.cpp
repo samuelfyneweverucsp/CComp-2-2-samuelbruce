@@ -41,4 +41,23 @@ int main () {
     // mostrar los balances una vez mas
     cout << "\n\naccount1: " << account1.getName() << " tiene balance de S/" << account1.getBalance(); 
     cout << "\naccount2: " << account2.getName() << " tiene balance de S/" << account2.getBalance();    
+
+    cout << "\n\nIngresa cuanto retirar de account1: " << endl;
+    int withdrawalAmount;
+    cin >> withdrawalAmount;
+    cout << "Retirando S/" << withdrawalAmount << " del balance de account1...";
+    account1.withdraw(withdrawalAmount); // agregar al balance de account1
+
+    // mostrar los balances de nuevo
+    cout << "\n\naccount1: " << account1.getName() << " tiene balance de S/" << account1.getBalance(); 
+    cout << "\naccount2: " << account2.getName() << " tiene balance de S/" << account2.getBalance();
+
+    cout << "\n\nIngresa cuanto retirar de account2: " << endl;
+    cin >> withdrawalAmount;
+    cout << "Retirando S/" << withdrawalAmount << " del balance de account2...";
+    account2.deposit(withdrawalAmount); // agregar al balance de account2
+
+    // mostrar los balances una vez mas
+    cout << "\n\naccount1: " << account1.getName() << " tiene balance de S/" << account1.getBalance(); 
+    cout << "\naccount2: " << account2.getName() << " tiene balance de S/" << account2.getBalance();   
 }
