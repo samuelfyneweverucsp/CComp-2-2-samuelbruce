@@ -65,6 +65,12 @@ class Invoice {
             return descuentoDeParte;
         }
 
+        double getInvoiceAmount() {
+            precioTotal = (cantidadDeParte * (precioCadaParte - descuentoDeParte))
+                            * (1 + impuestoProporcion);
+            return precioTotal;
+        }
+
 
     private:
         std::string numeroDeParte{"0"};
@@ -73,4 +79,5 @@ class Invoice {
         int precioCadaParte{20}; 
         double impuestoProporcion{0.002};
         double descuentoDeParte{0};
+        double precioTotal{0};
 };
