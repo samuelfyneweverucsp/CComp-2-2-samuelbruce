@@ -19,7 +19,7 @@ int main() {
 
     Invoice invoiceActual("Parte sin nombre", "Descripcion vacia", 0, 0);
 
-    void estatusDeParte() {
+    void estatusDeParte(); {
             cout << " Numero de parte: " << invoiceActual.getNumero() << endl;
             cout << " Descripcion de parte: " << invoiceActual.getDescripcion() << endl;
             cout << " Cantidad de parte: " << invoiceActual.getCantidad() << endl;
@@ -29,18 +29,18 @@ int main() {
             cout << " Costa total: " << invoiceActual.getInvoiceAmount() << endl;
         };
 
-    for (int i = 0; i < (numeroDeInvoices + 1); i++) {
+    for (int i = 1; i < (numeroDeInvoices + 1); i++) {
         cout << " Invoice predeterminada: " << endl;
         estatusDeParte();
 
         string numeroNuevo{""};
         cout << " Ingrese numero de parte:\n ";
-        getline(cin, numeroNuevo);
+        std::getline(cin, numeroNuevo);
         invoiceActual.setNumero(numeroNuevo);
 
         string descripcionNuevo{""};
         cout << " Ingrese descripcion de parte:\n ";
-        getline(cin, descripcionNuevo);
+        std::getline(cin, descripcionNuevo);
         invoiceActual.setDescripcion(descripcionNuevo);
 
         int cantidadNuevo{0};
@@ -60,7 +60,7 @@ int main() {
 
         int descuentoNuevo{0};
         cout << " Ingrese descuento de cada parte (aplicada antes del impuesto): "
-        cin >> descuentoNuevo;
+        std::cin >> descuentoNuevo;
         invoiceActual.setDescuento(descuentoNuevo);
 
         cout << " Invoice actual: "

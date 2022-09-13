@@ -22,8 +22,9 @@ int main() {
     int anhoNuevo;
     cin >> anhoNuevo;
 
-    Date ourDate(fechaNueva, mesNueva, anhoNuevo)
-    ourDate.mostrarFecha();
+    Date ourDate(fechaNueva, mesNueva, anhoNuevo);
+    ourDate.mostrarFecha(ourDate);
+
     return 0;
 }
  

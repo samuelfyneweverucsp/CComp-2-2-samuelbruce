@@ -47,8 +47,8 @@ class Date {
             anho = anhoToSet;
         }
 
-        void mostrarFecha(date elDate) {
+        void mostrarFecha(Date elDate) {
             std::cout << "MM/DD/YYYY: " << mes << "/" << fecha << "/" << anho << endl;
         }
 
-}
+};

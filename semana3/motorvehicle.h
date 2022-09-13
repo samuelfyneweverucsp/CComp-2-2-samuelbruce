@@ -64,17 +64,17 @@ class MotorVehicle {
             color = nuevoColor;
         }
 
-        void setEngineCapacity() {
+        void setEngineCapacity(int nuevoEngineCapacity) {
             engineCapacity = nuevoEngineCapacity;
         }
 
         void displayCarDetails() {
-            cout >> "make: " >> make >> endl;
-            cout >> "fuelType: " >> fuelType >> endl;
-            cout >> "yearOfManufacture: " >> yearOfManufacture >> endl;
-            cout >> "color: " >> color >> endl;
-            cout >> "engineCapacity: " >> engineCapacity >> endl;
+            std::cout << "make: " << make << endl;
+            std::cout << "fuelType: " << fuelType << endl;
+            std::cout << "yearOfManufacture: " << yearOfManufacture << endl;
+            std::cout << "color: " << color << endl;
+            std::cout << "engineCapacity: " << engineCapacity << endl;
         }
 
-}
+};
  
