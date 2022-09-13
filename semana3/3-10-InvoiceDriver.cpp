@@ -20,19 +20,11 @@ int main() {
 
     Invoice invoiceActual("Parte sin nombre", "Descripcion vacia", 0, 0);
 
-    void estatusDeParte(); {
-            cout << " Numero de parte: " << invoiceActual.getNumero() << endl;
-            cout << " Descripcion de parte: " << invoiceActual.getDescripcion() << endl;
-            cout << " Cantidad de parte: " << invoiceActual.getCantidad() << endl;
-            cout << " Precio cada unidad: " << invoiceActual.getPrecio() << endl;
-            cout << " Impuesto (proporcion): " << invoiceActual.getImpuesto() << endl;
-            cout << " Descuento: " << invoiceActual.getDescuento() << endl;
-            cout << " Costa total: " << invoiceActual.getInvoiceAmount() << endl;
-        };
-
     for (int i = 1; i < (numeroDeInvoices + 1); i++) {
         cout << " Invoice predeterminada: " << endl;
-        estatusDeParte();
+
+        invoiceActual.estatusDeParte();
+        cout << " Costa total: " << invoiceActual.getInvoiceAmount() << endl;
 
         string numeroNuevo{""};
         cout << " Ingrese numero de parte:\n " << endl;
@@ -65,7 +57,8 @@ int main() {
         invoiceActual.setDescuento(descuentoNuevo);
 
         cout << " Invoice actual: ";
-        estatusDeParte();
+        invoiceActual.estatusDeParte();
+        cout << " Costa total: " << invoiceActual.getInvoiceAmount() << endl;
     }
     cout << " ¡Que tenga usted un buen dia! " << endl;
 

@@ -79,6 +79,15 @@ class Invoice {
             return descuentoDeParte;
         }
 
+        void estatusDeParte() {
+            cout << " Numero de parte: " << numeroDeParte << endl;
+            cout << " Descripcion de parte: " << descripcionDeParte << endl;
+            cout << " Cantidad de parte: " << cantidadDeParte << endl;
+            cout << " Precio cada unidad: " << precioCadaParte << endl;
+            cout << " Impuesto (proporcion): " << impuestoProporcion << endl;
+            cout << " Descuento: " << descuentoDeParte << endl;
+        };
+
         double getInvoiceAmount() {
             precioTotal = (cantidadDeParte * (precioCadaParte - descuentoDeParte))
                             * (1 + impuestoProporcion);
