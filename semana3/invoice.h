@@ -63,11 +63,11 @@ class Invoice {
             return precioCadaParte;
         }
 
-        void setImpuesto(int impuesto) {
+        void setImpuesto(double impuesto) {
             impuestoProporcion = impuesto;
         }
 
-        int getImpuesto() const {
+        double getImpuesto() const {
             return impuestoProporcion;
         }
 
@@ -75,22 +75,21 @@ class Invoice {
             descuentoDeParte = descuento;
         }
 
-        int getDescuento() {
+        double getDescuento() {
             return descuentoDeParte;
         }
 
         void estatusDeParte() {
-            cout << " Numero de parte: " << numeroDeParte << endl;
-            cout << " Descripcion de parte: " << descripcionDeParte << endl;
-            cout << " Cantidad de parte: " << cantidadDeParte << endl;
-            cout << " Precio cada unidad: " << precioCadaParte << endl;
-            cout << " Impuesto (proporcion): " << impuestoProporcion << endl;
-            cout << " Descuento: " << descuentoDeParte << endl;
+            cout << " Numero de parte: " << numeroDeParte << std::endl;
+            cout << " Descripcion de parte: " << descripcionDeParte << std::endl;
+            cout << " Cantidad de parte: " << cantidadDeParte << std::endl;
+            cout << " Precio cada unidad: " << precioCadaParte << std::endl;
+            cout << " Impuesto (proporcion): " << impuestoProporcion << std::endl;
+            cout << " Descuento: " << descuentoDeParte << std::endl;
         };
 
         double getInvoiceAmount() {
-            precioTotal = (cantidadDeParte * (precioCadaParte - descuentoDeParte))
-                            * (1 + impuestoProporcion);
+            precioTotal = (cantidadDeParte * (precioCadaParte - descuentoDeParte)) * (1 + impuestoProporcion);
             return precioTotal;
         }
 

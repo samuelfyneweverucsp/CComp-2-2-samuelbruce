@@ -26,37 +26,42 @@ int main() {
         invoiceActual.estatusDeParte();
         cout << " Costa total: " << invoiceActual.getInvoiceAmount() << endl;
 
-        string numeroNuevo{""};
-        cout << " Ingrese numero de parte:\n " << endl;
+        
+        cout << " Ingrese numero de parte: " << endl;
+        string numeroNuevo{" "};
         getline(cin, numeroNuevo);
         invoiceActual.setNumero(numeroNuevo);
 
-        string descripcionNuevo{""};
-        cout << " Ingrese descripcion de parte:\n " << endl;
+        cout << " Ingrese numero de parte: " << endl;
+        getline(cin, numeroNuevo);
+        invoiceActual.setNumero(numeroNuevo);
+
+        cout << " Ingrese descripcion de parte: " << endl;
+        string descripcionNuevo{" "};
         getline(cin, descripcionNuevo);
         invoiceActual.setDescripcion(descripcionNuevo);
 
         int cantidadNuevo{0};
-        cout << " Ingrese cantidad de parte:\n "; 
+        cout << " Ingrese cantidad de parte: " << endl; 
         cin >> cantidadNuevo;
         invoiceActual.setCantidad(cantidadNuevo);
 
         int precioNuevo{0};
-        cout << " Ingrese precio de cada unidad:\n ";
+        cout << " Ingrese precio de cada unidad: " << endl;
         cin >> precioNuevo;
         invoiceActual.setPrecio(precioNuevo);
 
         int impuestoNuevo{0};
-        cout << " Ingrese impuesto como proporcion (p.ej. 10% = 0.1):\n ";
+        cout << " Ingrese impuesto como proporcion (p.ej. 10% = 0.1): " << endl;
         cin >> impuestoNuevo;
         invoiceActual.setImpuesto(impuestoNuevo);
 
         int descuentoNuevo{0};
-        cout << " Ingrese descuento de cada parte (aplicada antes del impuesto): ";
-        std::cin >> descuentoNuevo;
+        cout << " Ingrese descuento de cada parte (aplicada antes del impuesto): " << endl;
+        cin >> descuentoNuevo;
         invoiceActual.setDescuento(descuentoNuevo);
 
-        cout << " Invoice actual: ";
+        cout << " Invoice actual:\n ";
         invoiceActual.estatusDeParte();
         cout << " Costa total: " << invoiceActual.getInvoiceAmount() << endl;
     }
