@@ -1,9 +1,23 @@
+/** @author samuelfyneweverucsp 
+ * @file clase Invoice, de ejercicio 3-10
+ * @brief para partes de autos **/ 
+
+
 #include <iostream>
 
 using std::string;
 using std::cout;
 
 class Invoice {
+    private:
+        std::string numeroDeParte{"0"};
+        std::string descripcionDeParte{" "};
+        int cantidadDeParte{1};
+        int precioCadaParte{20}; 
+        double impuestoProporcion{0.002};
+        double descuentoDeParte{0};
+        double precioTotal{0};
+
     public:
         explicit Invoice(std::string numeroInicial, 
                          std::string descripcionInicial,
@@ -71,13 +85,4 @@ class Invoice {
             return precioTotal;
         }
 
-
-    private:
-        std::string numeroDeParte{"0"};
-        std::string descripcionDeParte{" "};
-        int cantidadDeParte{1};
-        int precioCadaParte{20}; 
-        double impuestoProporcion{0.002};
-        double descuentoDeParte{0};
-        double precioTotal{0};
 };
