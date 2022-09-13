@@ -3,6 +3,7 @@
  * @brief  **/ 
 
 #include <iostream>
+#include <string>
 #include "invoice.h"
 
 using namespace std;
@@ -34,13 +35,13 @@ int main() {
         estatusDeParte();
 
         string numeroNuevo{""};
-        cout << " Ingrese numero de parte:\n ";
-        std::getline(cin, numeroNuevo);
+        cout << " Ingrese numero de parte:\n " << endl;
+        getline(cin, numeroNuevo);
         invoiceActual.setNumero(numeroNuevo);
 
         string descripcionNuevo{""};
-        cout << " Ingrese descripcion de parte:\n ";
-        std::getline(cin, descripcionNuevo);
+        cout << " Ingrese descripcion de parte:\n " << endl;
+        getline(cin, descripcionNuevo);
         invoiceActual.setDescripcion(descripcionNuevo);
 
         int cantidadNuevo{0};
@@ -59,11 +60,11 @@ int main() {
         invoiceActual.setImpuesto(impuestoNuevo);
 
         int descuentoNuevo{0};
-        cout << " Ingrese descuento de cada parte (aplicada antes del impuesto): "
+        cout << " Ingrese descuento de cada parte (aplicada antes del impuesto): ";
         std::cin >> descuentoNuevo;
         invoiceActual.setDescuento(descuentoNuevo);
 
-        cout << " Invoice actual: "
+        cout << " Invoice actual: ";
         estatusDeParte();
     }
     cout << " ¡Que tenga usted un buen dia! " << endl;
