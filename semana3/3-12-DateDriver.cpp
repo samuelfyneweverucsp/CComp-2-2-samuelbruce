@@ -8,18 +8,18 @@
 using namespace std;
 
 int main() {
-    int fechaNueva{1};
+    int fechaNueva = 1;
     cout << "Ingrese fecha (numero del dia del mes): " << endl;
     cin >> fechaNueva;
 
 
     cout << "Ingrese numero del mes: " << endl;
-    int mesNueva{1};
+    int mesNueva = 1;
     cin >> mesNueva;
 
 
     cout << "Ingrese numero del anho: " << endl;
-    int anhoNuevo;
+    int anhoNuevo = 2000;
     cin >> anhoNuevo;
 
     Date ourDate(fechaNueva, mesNueva, anhoNuevo);

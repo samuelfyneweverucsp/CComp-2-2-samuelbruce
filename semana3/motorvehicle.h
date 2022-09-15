@@ -9,11 +9,11 @@ using std::cout;
 
 class MotorVehicle {
     private:
-        std::string make{""};
-        std::string fuelType{""};
-        int yearOfManufacture{2000};
-        std::string color{""};
-        int engineCapacity{0};
+        std::string make = "";
+        std::string fuelType = "";
+        int yearOfManufacture = 2000;
+        std::string color = "";
+        int engineCapacity = 0;
 
     public:
         explicit MotorVehicle(std::string inicialMake, 
@@ -69,11 +69,13 @@ class MotorVehicle {
         }
 
         void displayCarDetails() {
-            std::cout << "make: " << make << endl;
-            std::cout << "fuelType: " << fuelType << endl;
-            std::cout << "yearOfManufacture: " << yearOfManufacture << endl;
-            std::cout << "color: " << color << endl;
-            std::cout << "engineCapacity: " << engineCapacity << endl;
+            std::cout << "\n" << std::endl;
+            std::cout << "make: " << make << std::endl;
+            std::cout << "fuelType: " << fuelType << std::endl;
+            std::cout << "yearOfManufacture: " << yearOfManufacture << std::endl;
+            std::cout << "color: " << color << std::endl;
+            std::cout << "engineCapacity: " << engineCapacity << std::endl;
+            std::cout << "\n\n" << std::endl;
         }
 
 };
