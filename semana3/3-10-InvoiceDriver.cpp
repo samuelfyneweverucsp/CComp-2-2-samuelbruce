@@ -33,7 +33,7 @@ int main() {
         getline(std::cin, numeroNuevo);
         invoiceActual.setNumero(numeroNuevo);
 
-        cout << " Ingrese numero de parte: " << endl;
+
         getline(std::cin, numeroNuevo);
         invoiceActual.setNumero(numeroNuevo);
 
@@ -62,7 +62,7 @@ int main() {
         std::cin >> descuentoNuevo;
         invoiceActual.setDescuento(descuentoNuevo);
 
-        cout << " Invoice actual:\n ";
+        cout << " Invoice actual:\n";
         invoiceActual.estatusDeParte();
         cout << " Costa total: " << invoiceActual.getInvoiceAmount() << endl;
     }
