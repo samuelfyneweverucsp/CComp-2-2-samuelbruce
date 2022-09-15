@@ -4,19 +4,20 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip> 
 #include "invoice.h"
 
 using namespace std;
 
 
 int main() {
-    int numeroDeInvoices{0};
+    int numeroDeInvoices = 0;
 
     cout << "+====================================+" << endl;
     cout << " Bienvenid@s al programa Invoice 9001 " << endl;
     cout << " Ingrese numero de Invoices para hoy: " << endl;
     cout << " ";
-    cin >> numeroDeInvoices;
+    std::cin >> numeroDeInvoices;
 
     Invoice invoiceActual("Parte sin nombre", "Descripcion vacia", 0, 0);
 
@@ -28,37 +29,37 @@ int main() {
 
         
         cout << " Ingrese numero de parte: " << endl;
-        string numeroNuevo{" "};
-        getline(cin, numeroNuevo);
+        string numeroNuevo = " ";
+        getline(std::cin, numeroNuevo);
         invoiceActual.setNumero(numeroNuevo);
 
         cout << " Ingrese numero de parte: " << endl;
-        getline(cin, numeroNuevo);
+        getline(std::cin, numeroNuevo);
         invoiceActual.setNumero(numeroNuevo);
 
         cout << " Ingrese descripcion de parte: " << endl;
-        string descripcionNuevo{" "};
-        getline(cin, descripcionNuevo);
+        string descripcionNuevo = " ";
+        getline(std::cin, descripcionNuevo);
         invoiceActual.setDescripcion(descripcionNuevo);
 
-        int cantidadNuevo{0};
+        int cantidadNuevo = 0;
         cout << " Ingrese cantidad de parte: " << endl; 
-        cin >> cantidadNuevo;
+        std::cin >> cantidadNuevo;
         invoiceActual.setCantidad(cantidadNuevo);
 
-        int precioNuevo{0};
+        int precioNuevo = 0;
         cout << " Ingrese precio de cada unidad: " << endl;
-        cin >> precioNuevo;
+        std::cin >> precioNuevo;
         invoiceActual.setPrecio(precioNuevo);
 
-        int impuestoNuevo{0};
+        double impuestoNuevo = 0;
         cout << " Ingrese impuesto como proporcion (p.ej. 10% = 0.1): " << endl;
-        cin >> impuestoNuevo;
+        std::cin >> impuestoNuevo;
         invoiceActual.setImpuesto(impuestoNuevo);
 
-        int descuentoNuevo{0};
+        double descuentoNuevo = 0;
         cout << " Ingrese descuento de cada parte (aplicada antes del impuesto): " << endl;
-        cin >> descuentoNuevo;
+        std::cin >> descuentoNuevo;
         invoiceActual.setDescuento(descuentoNuevo);
 
         cout << " Invoice actual:\n ";

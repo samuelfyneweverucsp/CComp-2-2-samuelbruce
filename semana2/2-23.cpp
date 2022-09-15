@@ -7,7 +7,11 @@
 using namespace std;
 
 int main() {
-    int int1{0}, int2{0}, int3{0}, int4{0}, int5{0}; // inicializar 5 valores
+    int int1 = 0;
+    int int2 = 0;
+    int int3 = 0;
+    int int4 = 0;
+    int int5 = 0; // inicializar 5 valores
     int mayor = 0;
     int menor = 0;
 

@@ -10,13 +10,13 @@ using std::cout;
 
 class Invoice {
     private:
-        std::string numeroDeParte{"0"};
-        std::string descripcionDeParte{" "};
-        int cantidadDeParte{1};
-        int precioCadaParte{20}; 
-        double impuestoProporcion{0.002};
-        double descuentoDeParte{0};
-        double precioTotal{0};
+        std::string numeroDeParte = "0";
+        std::string descripcionDeParte = " ";
+        int cantidadDeParte = 1;
+        int precioCadaParte = 20; 
+        double impuestoProporcion = 0.002;
+        double descuentoDeParte = 0;
+        double precioTotal = 0;
 
     public:
         explicit Invoice(std::string numeroInicial, 
@@ -80,12 +80,12 @@ class Invoice {
         }
 
         void estatusDeParte() {
-            cout << " Numero de parte: " << numeroDeParte << std::endl;
-            cout << " Descripcion de parte: " << descripcionDeParte << std::endl;
-            cout << " Cantidad de parte: " << cantidadDeParte << std::endl;
-            cout << " Precio cada unidad: " << precioCadaParte << std::endl;
-            cout << " Impuesto (proporcion): " << impuestoProporcion << std::endl;
-            cout << " Descuento: " << descuentoDeParte << std::endl;
+            std::cout << " Numero de parte: " << numeroDeParte << std::endl;
+            std::cout << " Descripcion de parte: " << descripcionDeParte << std::endl;
+            std::cout << " Cantidad de parte: " << cantidadDeParte << std::endl;
+            std::cout << " Precio cada unidad: " << precioCadaParte << std::endl;
+            std::cout << " Impuesto (proporcion): " << impuestoProporcion << std::endl;
+            std::cout << " Descuento: " << descuentoDeParte << std::endl;
         };
 
         double getInvoiceAmount() {

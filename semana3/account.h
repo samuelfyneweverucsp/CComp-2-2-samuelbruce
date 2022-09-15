@@ -18,7 +18,7 @@ using std::cout;
 class Account {
     public:
         explicit Account(std::string accountName, int initialBalance)
-        : nameDataMember{accountName} {
+        : nameDataMember(accountName) {
             // validar que initialBalance es positivo; si no lo es,
             // mantener el balance en 0
             if (initialBalance > 0) {
@@ -58,6 +58,6 @@ class Account {
 
     private:
         std::string nameDataMember;
-        int balanceDataMember{0};
+        int balanceDataMember = 0;
 };
 
