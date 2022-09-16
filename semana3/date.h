@@ -4,13 +4,12 @@
 
 #include <iostream>
 using std::string;
-using std::cout;
 
 class Date {
     private: 
-        int fecha{1};
-        int mes{1};
-        int anho{2000};
+        int fecha = 1;
+        int mes = 1;
+        int anho = 2000;
     
     public:
         explicit Date(int fechaInicial, int mesInicial, int anhoInicial) {
@@ -18,7 +17,7 @@ class Date {
             if ((mesInicial > 1) && (mesInicial < 13)) {
                 mes = mesInicial;
             } else {
-                cout << "El mes no es valida, entonces queda con enero :)" << endl; 
+                std::cout << "El mes no es valida, entonces queda con enero :)" << std::endl; 
                 mes = 1;}
             anho = anhoInicial;
         }
@@ -48,7 +47,7 @@ class Date {
         }
 
         void mostrarFecha(Date elDate) {
-            std::cout << "MM/DD/YYYY: " << mes << "/" << fecha << "/" << anho << endl;
+            std::cout << "Date (formato MM/DD/YYYY): " << mes << "/" << fecha << "/" << anho << std::endl;
         }
 
 };
