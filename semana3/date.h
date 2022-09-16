@@ -7,11 +7,11 @@ using std::string;
 
 class Date {
     private: 
-        int fecha = 1;
+        int fecha{1};
         int mes = 1;
         int anho = 2000;
     
-    public:
+    public: 
         explicit Date(int fechaInicial, int mesInicial, int anhoInicial) {
             fecha = fechaInicial;
             if ((mesInicial > 1) && (mesInicial < 13)) {
