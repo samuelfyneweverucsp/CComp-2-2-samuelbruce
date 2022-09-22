@@ -8,7 +8,7 @@
 using namespace std;
 
 int main() {
-    int fechaNueva = 1;
+    int fechaNueva{1};
     cout << "Ingrese fecha (numero del dia del mes): " << endl;
     cin >> fechaNueva;
 
