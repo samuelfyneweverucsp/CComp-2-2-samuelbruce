@@ -24,12 +24,26 @@ void ordenarArregloBurbuja(int arreglo[], int tam) {
     
 }
 
-void ordenarArregloInsercion(int arreglo[], int tam) {
+void ordenarArregloInsercion(int arreglo[], int tam) { // mi intento
     for(int i = 1; i < tam; i++) {
         int valorActual = arreglo[i];
         for(int j = i - 1; (j > 0 && valorActual > arreglo[j]); j--) {
             intercambiarValores(arreglo[j], arreglo[j - 1]);
         }
+    }
+}
+
+void inSort(int arreglo[], int n) {                    // la solucion del compadre
+    int i, key, j;
+    for (i = 1; i < n; i++){ 
+        key = arreglo[i]; 
+        j = i - 1;   
+        while (j >= 0 && arreglo[j] > key)
+        { 
+            arreglo[j + 1] = arreglo[j]; 
+            j = j - 1; 
+        } 
+        arreglo[j + 1] = key; 
     }
 }
 
@@ -51,6 +65,9 @@ int main () {
     int arreglo2[] = {4, 2, 7, 1, 9};
     ordenarArregloInsercion(arreglo2, 5);
     imprimirArreglo(arreglo2, 5);
+    int arreglo3[] = {9, 8, 7, 5, 6, 4, 3, 2, 1};
+    ordenarArregloInsercion(arreglo3, 9);
+    imprimirArreglo(arreglo3, 9);
     
 
     return 0;
