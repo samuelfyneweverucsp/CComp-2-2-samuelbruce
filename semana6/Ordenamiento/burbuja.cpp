@@ -27,9 +27,11 @@ void ordenarArregloBurbuja(int arreglo[], int tam) {
 void ordenarArregloInsercion(int arreglo[], int tam) { // mi intento
     for(int i = 1; i < tam; i++) {
         int valorActual = arreglo[i];
-        for(int j = i - 1; (j > 0 && valorActual > arreglo[j]); j--) {
-            intercambiarValores(arreglo[j], arreglo[j - 1]);
+        int j = i - 1;
+        for(; (j >= 0 && valorActual < arreglo[j]); j--) {
+            arreglo[j + 1] = arreglo[j];
         }
+        arreglo[j + 1] = valorActual;
     }
 }
 
@@ -59,14 +61,22 @@ void imprimirArreglo(int arreglo[], int tam) {
 
 int main () {
 
+
     int arreglo[] = {21, 65, 98, 15};
-    ordenarArregloBurbuja(arreglo, 4);
+
+    cout << sizeof(arreglo) << endl;
+
+    int tam1 = sizeof(arreglo) / sizeof(arreglo[0]);
+
+    ordenarArregloBurbuja(arreglo, tam1);
     imprimirArreglo(arreglo, 4);
     int arreglo2[] = {4, 2, 7, 1, 9};
-    ordenarArregloInsercion(arreglo2, 5);
+    int tam2 = sizeof(arreglo2) / sizeof(arreglo2[0]);
+    ordenarArregloInsercion(arreglo2, tam2);
     imprimirArreglo(arreglo2, 5);
     int arreglo3[] = {9, 8, 7, 5, 6, 4, 3, 2, 1};
-    ordenarArregloInsercion(arreglo3, 9);
+    int tam3 = sizeof(arreglo3) / sizeof(arreglo3[0]);
+    ordenarArregloInsercion(arreglo3, tam3);
     imprimirArreglo(arreglo3, 9);
     
 
