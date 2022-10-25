@@ -22,15 +22,37 @@ class GradeBook {
         }
 
         void mensajeDeBienvenido() const {
-            std::cout << "¡Bienvenido al GradeBook para el curso de\n" << getNombreDelCurso << "!" << std::endl;
+            std::cout << "¡Bienvenido al GradeBook para el curso de\n" << getNombreDelCurso() << "!" << std::endl;
         }
 
         void procesarNotas() const {
-            
+             mostrarNotas();
+             std::cout << std::setprecision(2) << std::fixed;
+             std::cout << "\nClass average is: " << getAverage() << std::endl;
+             std::cout << "Lowest grade is: " << getMinimum() << std::endl;
+             std::cout << "Highest grade is: " << getMaximum() << std::endl;
+
+
         }
 
         void mostrarNotas() const {
             std::cout << "\nLas notas son:\n\n" << std::endl; 
+        }
+
+        double getAverage() const {
+            return;
+        }
+
+        int getMinimum() const {
+            return;
+        }
+
+        int getMaximum() const {
+            return;
+        }
+
+        void mostrarBarChart() const {
+            return;
         }
 
     private:
