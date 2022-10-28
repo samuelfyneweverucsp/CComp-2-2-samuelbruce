@@ -6,6 +6,8 @@ void bSortArreglo(int arreglo[], int tam);
 
 void iSortArreglo(int arreglo[], int tam);
 
+void iSortArreglo2(int arreglo[], int tam);
+
 void imprimirArreglo(int arreglo[], int tam);
 
 int main () {
@@ -13,10 +15,14 @@ int main () {
     imprimirArreglo(valores, sizeof(valores)/sizeof(valores[0]));
     bSortArreglo(valores, sizeof(valores)/sizeof(valores[0]));
     imprimirArreglo(valores, sizeof(valores)/sizeof(valores[0]));
-    int valores2[10] = {4, 6, 2, 7, 0, 18, 8, 9, -1, -3};
+    int valores2[10], valores3[10] = {4, 6, 2, 7, 0, 18, 8, 9, -1, -3};
     imprimirArreglo(valores2, 10);
     iSortArreglo(valores2, 10);
     imprimirArreglo(valores2, 10);
+
+    imprimirArreglo(valores3, 10);
+    iSortArreglo2(valores3, 10);
+    imprimirArreglo(valores3, 10);
 
 }
 
@@ -48,6 +54,19 @@ void bSortArreglo(int arreglo[], int tam) {
 void iSortArreglo(int arreglo[], int tam) {
     for(int i = 1; i < tam; i++) {
         for(int j = i; (j > 0 && arreglo[j - 1] > arreglo[j]); j--) {
+            intercambiarEnteros(arreglo[j], arreglo[j - 1]);
+        }
+    }
+}
+
+
+void bSortArreglo2(int arreglo[], int tam) {
+
+}
+
+void iSortArreglo2(int arreglo[], int tam) {
+    for(int i = 1; i < tam; i++) {
+        for(int j = i; (j > 0 && arreglo[j] < arreglo[j - 1]); j--) {
             intercambiarEnteros(arreglo[j], arreglo[j - 1]);
         }
     }
