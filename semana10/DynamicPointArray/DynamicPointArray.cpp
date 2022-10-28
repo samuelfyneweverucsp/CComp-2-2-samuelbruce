@@ -19,8 +19,12 @@ DynamicPointArray::DynamicPointArray(const DynamicPointArray &o) {
     size = o.size;
     Point *data = new Point[o.size];
     for(int i = 0; i < size; i++) {
-        data[i] = Point(o.data[i].getX(), o.data[i].getY());
+        data[i] = Point();
+        data[i].setX(o.data[i].getX());
+        data[i].setY(o.data[i].getY());
+    }
 }
+
 
 int DynamicPointArray::getSize() const {
     return size;
@@ -51,7 +55,7 @@ void DynamicPointArray::push_back(Point elem) {
 
 void DynamicPointArray::insert(Point elem, int pos) {
     // 1
-    int *tmp = new Point[size + 1];
+    Point *tmp = new Point[size + 1];
     // 2
     for(int i = 0, j = 0; i < size; i++, j++) {
         if( j == pos) {
@@ -71,7 +75,7 @@ void DynamicPointArray::insert(Point elem, int pos) {
 
 void DynamicPointArray::remove(int pos) {
     // 1: reservar datos
-    int *tmp = new Point[size - 1];
+    Point *tmp = new Point[size - 1];
     // 2: copiar datos
     for(int i = 0; i < pos; i++) {
         tmp[i] = data[i]; 
@@ -92,3 +96,5 @@ void DynamicPointArray::remove(int pos) {
 DynamicPointArray::~DynamicPointArray() {
     delete[] data;
 }
+
+

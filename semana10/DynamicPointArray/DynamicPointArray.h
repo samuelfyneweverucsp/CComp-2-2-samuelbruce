@@ -15,7 +15,7 @@ class DynamicPointArray {
 
         void push_back(Point elem);
         void insert(Point elem, int pos);
-        void remove(Point pos);
+        void remove(int pos);
 
         ~DynamicPointArray();
 };

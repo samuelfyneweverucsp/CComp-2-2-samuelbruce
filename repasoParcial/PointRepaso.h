@@ -6,7 +6,7 @@
 
 class Point {
     public:
-        explicit Point(double xIngresado, double yIngresado) : x{xIngresado}, y{yIngresado} {
+        explicit Point(int xIngresado, int yIngresado) : x{xIngresado}, y{yIngresado} {
             x = xIngresado;
             y = yIngresado;
         }

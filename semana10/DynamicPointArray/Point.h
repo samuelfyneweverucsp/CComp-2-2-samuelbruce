@@ -7,17 +7,14 @@ using std::cout;
 
 class Point {
     public:
-        Point(int _x, int _y) : x(_x), y(_y) {
-            x = _x;
-            y = _y;
-            //std::cout << "Constructor" << std::endl;
+        explicit Point(int xIngresado, int yIngresado) : x{xIngresado}, y{yIngresado} {
+            x = xIngresado;
+            y = yIngresado;
         }
+        
+        Point() : x{0}, y{0} {}
 
-        Point() {
-            //std::cout << "Constructor sin argumentos" << std::endl;
-            x = 0;
-            y = 0;
-        }
+        Point(int _x) : x(_x), y(3) {}
 
         Point(Point &o) {
             this->x = o.getX();
