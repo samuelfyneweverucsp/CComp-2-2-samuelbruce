@@ -19,9 +19,10 @@ DynamicPointArray::DynamicPointArray(const DynamicPointArray &o) {
     size = o.size;
     Point *data = new Point[o.size];
     for(int i = 0; i < size; i++) {
-        data[i] = Point();
-        data[i].setX(o.data[i].getX());
-        data[i].setY(o.data[i].getY());
+        o.data[i].print();
+        data[i] = o.data[i];
+        // data[i].setX(o.data[i].getX());
+        // data[i].setY(o.data[i].getY());
     }
 }
 

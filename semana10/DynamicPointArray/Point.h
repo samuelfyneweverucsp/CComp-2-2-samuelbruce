@@ -7,9 +7,9 @@ using std::cout;
 
 class Point {
     public:
-        explicit Point(int xIngresado, int yIngresado) : x{xIngresado}, y{yIngresado} {
-            x = xIngresado;
-            y = yIngresado;
+        explicit Point(int xIngresado, int yIngresado) : x(xIngresado), y(yIngresado) {
+            /* x = xIngresado;
+            y = yIngresado; */
         }
         
         Point() : x{0}, y{0} {}

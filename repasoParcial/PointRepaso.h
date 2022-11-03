@@ -1,14 +1,14 @@
-#ifndef __POINT_H__
-#define __POINT_H__
+#ifndef __POINTREPASO_H__
+#define __POINTREPASO_H__
 
 #include <iostream>
 #include <cmath>
 
 class Point {
     public:
-        explicit Point(int xIngresado, int yIngresado) : x{xIngresado}, y{yIngresado} {
-            x = xIngresado;
-            y = yIngresado;
+        explicit Point(int xIngresado, int yIngresado) : x(xIngresado), y(yIngresado) {
+            // x = xIngresado;
+            // y = yIngresado;
         }
         Point() : x{0}, y{0} {}
 

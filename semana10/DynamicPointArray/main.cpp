@@ -12,11 +12,9 @@ int main() {
     Point p1;
     Point p2;
     p2.setX(5); p2.setY(7);
-
     Point p3;
     p3.setX(7); p3.setY(10);
-    Point p4;
-    p4.setX(9); p4.setY(-2);
+    Point p4(9, -2);
 
     Point arreglo[] = {p1, p2, p3, p4, p1, p2, p3};
     DynamicPointArray da2(arreglo, 4);
