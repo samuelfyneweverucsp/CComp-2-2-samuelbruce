@@ -8,9 +8,12 @@
 // en proyectos grandes, mejor es separar la declaración de la implementación
 // acá es como un esquema
 // en IntArray.cpp, hay el contenido
+
+#include <iostream>
+#include <array>
+
 class IntArray {
-        int size;
-        int *data;        
+        friend std::ostream& operator<<(std::ostream&, const IntArray); // prototipo
     public:
         IntArray(int size);
         IntArray(const IntArray &o);
@@ -21,6 +24,10 @@ class IntArray {
         void print() const ;
 
         ~IntArray();
+    private:
+        int size;
+        int *data; 
+        
 };
 
 #endif

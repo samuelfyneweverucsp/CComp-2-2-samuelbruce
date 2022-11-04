@@ -1,5 +1,8 @@
 #include <iostream>
+#include <string>
 #include "IntArray.h"
+
+using namespace std;
 
 IntArray::IntArray(int size) {
     data = new int[size];
@@ -32,7 +35,17 @@ void IntArray::print() const {
         std::cout << data[i] << " ";
     std::cout << std::endl;
 }
- 
+
+
 IntArray::~IntArray() { // destructor
     delete [] data;
+}
+
+ostream& operator<<(ostream& output, const IntArray arr) {
+    for (size_t i = 0; i < arr.getSize(); i++)
+    {
+        output << arr.getAt(i) << " ";
+    }
+    return output;
+    
 }

@@ -3,6 +3,8 @@
 #include "Point.h"
 
 class DynamicPointArray {
+        friend std::ostream& operator<<(std::ostream&, const DynamicPointArray); // prototipo
+    private:
         int size;
         Point *data;
     public:

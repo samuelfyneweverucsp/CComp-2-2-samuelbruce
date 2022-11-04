@@ -1,7 +1,9 @@
 #include <iostream>
+#include <string>
 #include "DynamicPointArray.h"
 #include "Point.h"
 
+using namespace std;
 
 DynamicPointArray::DynamicPointArray() {
     this->size = 0;
@@ -98,4 +100,10 @@ DynamicPointArray::~DynamicPointArray() {
     delete[] data;
 }
 
-
+ostream& operator<<(ostream& output, const DynamicPointArray arr) {
+    for (size_t i = 0; i < arr.getSize(); i++)
+    {
+        output << "(" << arr.data[i].getX() << ", " << arr.data[i].getY() << ")" << endl;
+    }
+    
+}
