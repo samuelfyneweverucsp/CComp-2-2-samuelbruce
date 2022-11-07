@@ -32,7 +32,6 @@ string Employee::getSocialSecurityNumber() const {
 
 // toString Employee's information (virtual, but not pure virtual)
 string Employee::toString() const {
-    return getFirstName() + " "s + getLastName() +
-    "\nsocial security number: "s + getSocialSecurityNumber();
+    return getFirstName() + " "s + getLastName() + "\nsocial security number: "s + getSocialSecurityNumber();
 }
 

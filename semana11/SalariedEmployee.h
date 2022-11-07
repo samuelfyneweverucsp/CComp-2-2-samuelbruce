@@ -27,5 +27,9 @@ private:
 
 };
 
+    SalariedEmployee operator++(SalariedEmployee persona) {
+        persona.setWeeklySalary(persona.getWeeklySalary() + 1);
+    }
+
 #endif // __SALARIED_H__
 
