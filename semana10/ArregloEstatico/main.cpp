@@ -15,6 +15,8 @@ int main() {
     if(true) {
         IntArray b = a;
     }
+
+    cout << a << endl;
  
     return 0;
 }

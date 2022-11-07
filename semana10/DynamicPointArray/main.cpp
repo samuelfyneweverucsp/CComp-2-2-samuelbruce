@@ -14,7 +14,7 @@ int main() {
     p2.setX(5); p2.setY(7);
     Point p3;
     p3.setX(7); p3.setY(10);
-    Point p4(9, -2);
+    Point p4 = p2 + p3;
 
     Point arreglo[] = {p1, p2, p3, p4, p1, p2, p3};
     DynamicPointArray da2(arreglo, 4);
@@ -34,6 +34,8 @@ int main() {
 
     da2.remove(3);
     da2.print();
+
+    cout << da2 << endl;
 
     return 0;
 }
