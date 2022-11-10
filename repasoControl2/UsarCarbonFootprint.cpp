@@ -14,9 +14,9 @@ int main () {
     Bicycle Giant(50.0);
     cout << Giant.getCarbonFootprint() << endl;
     
-    /*
+    
     Building Koinonia(500, 500);
     cout << Koinonia.getCarbonFootprint();
-    */
+    
 
 }

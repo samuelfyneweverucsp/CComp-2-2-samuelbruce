@@ -12,12 +12,18 @@ int main () {
     cout << CumpleDaisy;
     cout << NewYearsEve;
 
-    ++CumpleSamu;
-    ++CumpleDaisy;
-    ++NewYearsEve;
+    CumpleSamu++;
+    CumpleDaisy++;
+    NewYearsEve++;
 
     cout << CumpleSamu;
     cout << CumpleDaisy;
     cout << NewYearsEve;
+
+    NewYearsEve += 100;
+    cout << NewYearsEve;
+
+    CumpleDaisy += 364;
+    cout << CumpleDaisy;
 
 }

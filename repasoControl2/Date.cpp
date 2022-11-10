@@ -21,20 +21,22 @@ void Date::setDate(int m, int d, int y) {
     if(y >= 1900 && y <= 2100) {year = y;} else {throw invalid_argument{"Year must be 1900-2100 in this implementation"};}
     if(d >= 1 && d <= days[m]) {day = d;} else {throw invalid_argument{"Day is out of range for current month"};}
 }
-
+/*
 Date& Date::operator++() { // prefixo
     helpIncrement();
     return *this;
 }
-
-/*
-Date Date::operator++(int) { // posfixo
-    Date temp{*this};
-    helpIncrement();
-
-    return temp;
-}
 */
+
+Date Date::operator++(int) { // posfixo
+    /* Date temp{*this};
+    temp.helpIncrement();
+
+    return temp; */
+    helpIncrement();
+    return *this;
+}
+
 
 Date& Date::operator+=(unsigned int addDays) {
     for (unsigned int i = 0; i < addDays; i++) {

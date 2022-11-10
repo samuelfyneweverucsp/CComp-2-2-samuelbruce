@@ -9,8 +9,8 @@ class Date {
 public:
     Date(int m = 1, int d = 1, int y = 2000);
     void setDate(int, int, int);
-    Date& operator++();   // prefixo
-    // Date operator++(int); // posfixo
+    // Date& operator++();   // prefixo
+    Date operator++(int); // posfixo
     Date& operator+=(unsigned int);
     static bool leapYear(int yr);
     bool endOfMonth(int d) const;
