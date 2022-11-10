@@ -6,7 +6,7 @@
 using std::cout;
 
 class Point {
-        friend std::ostream& operator<<(std::ostream&, const Point);
+        friend std::ostream& operator<<(std::ostream&, Point);
     public:
         explicit Point(int xIngresado, int yIngresado) : x(xIngresado), y(yIngresado) {
             /* x = xIngresado;
@@ -61,8 +61,9 @@ class Point {
 
 };
 
-        std::ostream& operator<<(std::ostream& output, const Point pt) { // se NECESITA nombre de variable porque estamos en IMPLEMENTACION, y no se olvide el STD:: antes de ostream&
-
+        std::ostream& operator<<(std::ostream& output, Point pt) { // se NECESITA nombre de variable porque estamos en IMPLEMENTACION, y no se olvide el STD:: antes de ostream&
+            output << "(" << pt.getX() << ", " << pt.getY() << ")" << endl;
+            return output;
         }
 
 #endif

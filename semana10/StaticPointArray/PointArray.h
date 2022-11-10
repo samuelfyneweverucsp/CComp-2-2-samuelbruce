@@ -1,6 +1,9 @@
 #ifndef __POINTARRAY_H__
 #define __POINTARRAY_H__
 #include "Point.h"
+#include <iostream>
+
+
 /**
  * Arreglo de POINTS estático representado en una clase
 */
@@ -10,8 +13,8 @@
 // en PointArray.cpp, hay el contenido
 
 class PointArray {
-        int size;
-        Point *data;        
+    friend std::ostream& operator<<(std::ostream&, PointArray&);
+      
     public:
         PointArray(int size);
         PointArray(const PointArray &o);
@@ -22,6 +25,9 @@ class PointArray {
         void print() const ;
 
         ~PointArray();
+    private:
+        int size;
+        Point *data;  
 };
 
 #endif

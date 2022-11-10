@@ -2,6 +2,7 @@
 #include <string>
 #include "IntArray.h"
 
+
 using namespace std;
 
 IntArray::IntArray(int size) {

@@ -1,6 +1,7 @@
 #ifndef __INTARRAY_H__
 #define __INTARRAY_H__
 
+
 /**
  * Arreglo de enteros estático representado en una clase
 */

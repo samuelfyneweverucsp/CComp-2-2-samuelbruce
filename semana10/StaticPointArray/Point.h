@@ -4,8 +4,10 @@
 #include <iostream>
 
 using std::cout;
+using std::endl;
 
 class Point {
+    friend std::ostream& operator<<(std::ostream&, Point);
     public:
         Point(int _x, int _y) : x(_x), y(_y) {
             x = _x;
@@ -53,5 +55,10 @@ class Point {
         int x, y; 
 
 };
+
+inline std::ostream& operator<<(std::ostream& output, Point pt) { // se NECESITA nombre de variable porque estamos en IMPLEMENTACION, y no se olvide el STD:: antes de ostream&
+    output << "(" << pt.getX() << ", " << pt.getY() << ")" << endl;
+    return output;
+}
 
 #endif

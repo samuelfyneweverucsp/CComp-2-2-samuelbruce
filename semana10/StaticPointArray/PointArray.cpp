@@ -3,7 +3,7 @@
 #include "Point.h"
 
 PointArray::PointArray(int size) {
-    Point *data = new Point[size];
+    data = new Point[size];
     this->size = size;
 }
 
@@ -24,7 +24,7 @@ Point PointArray::getAt(int index) const {
     if(index >= 0 && index < size)
         return data[index];      
     else
-        return;      
+        throw;      
 }
 
 int PointArray::getSize() const {
@@ -40,3 +40,11 @@ void PointArray::print() const {
 PointArray::~PointArray() { // destructor
     delete [] data;
 }
+
+std::ostream& operator<<(std::ostream& output, PointArray &parr) {
+    for(int i = 0; i < parr.getSize(); i++) {
+        output << parr.data[i];
+    }
+    return output;
+}
+
