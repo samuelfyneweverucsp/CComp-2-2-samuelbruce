@@ -23,6 +23,8 @@ Student StudentArray::getAt(int index) const {
     if(index >= 0 && index < size) {return data[index];}
 }
 
+StudentArray::~StudentArray() = default;
+
 int StudentArray::getSize() const {
     return size;
 }
