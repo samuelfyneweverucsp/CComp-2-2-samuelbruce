@@ -1,12 +1,12 @@
-#ifndef __DYNAMICPOINTARRAY_H__
-#define __DYNAMICPOINTARRAY_H__
+#ifndef __DYNAMICINTARRAY_H__
+#define __DYNAMICINTARRAY_H__
+
 #include "Point.h"
 
 class DynamicPointArray {
-        friend std::ostream& operator<<(std::ostream&, const DynamicPointArray); // prototipo
-    private:
         int size;
         Point *data;
+        void resize (int size );
     public:
         DynamicPointArray();
         DynamicPointArray(const Point arr[], int size);
@@ -15,11 +15,12 @@ class DynamicPointArray {
         int getSize() const;
         void print() const;
 
+        void clear ();
         void push_back(Point elem);
         void insert(Point elem, int pos);
         void remove(int pos);
 
         ~DynamicPointArray();
 };
- 
+
 #endif

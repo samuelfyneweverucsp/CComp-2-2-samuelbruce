@@ -2,7 +2,7 @@
 #include <string>
 #include "DynamicPointArray.h"
 #include "Point.h"
- 
+
 using namespace std;
 
 DynamicPointArray::DynamicPointArray() {

@@ -10,6 +10,7 @@ using namespace std;
 int main () {
     ifstream source("source-file.txt");
     ofstream destination("dest-file.txt");
+    /* TODO: copiar por caracter... esta copia por linea :/ */
     while(!source.eof()) {
         string linea;
         getline(cin, linea);

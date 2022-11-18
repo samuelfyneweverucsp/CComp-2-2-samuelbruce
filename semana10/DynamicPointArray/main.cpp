@@ -1,7 +1,7 @@
 #include <iostream>
 #include "DynamicPointArray.h"
 #include "Point.h"
-
+ 
 using namespace std;
 
 int main() {
