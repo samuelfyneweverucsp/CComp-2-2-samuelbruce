@@ -10,6 +10,8 @@ class Rectangle : public Polygon {
     public:
         Rectangle(int x, int y): width(x), height(y) {}
         virtual int area() {return this->width * this-> height;}
+        virtual void printwidth() {cout << this->width << '\n';}
+        virtual void printheight() {cout << this->height << '\n';}
 };
 
 #endif

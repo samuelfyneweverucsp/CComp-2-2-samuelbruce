@@ -14,9 +14,9 @@ class Polygon {
 
         virtual int area() = 0;
 
-        void printarea() {std::cout << this-> area() << '\n';}
-        void printwidth() {cout << this->width << '\n';}
-        void printheight() {cout << this->height << 'n';}
+        virtual void printarea() {std::cout << this-> area() << '\n';}
+        virtual void printwidth() {cout << this->width << '\n';}
+        virtual void printheight() {cout << this->height << '\n';}
 };
 
 
