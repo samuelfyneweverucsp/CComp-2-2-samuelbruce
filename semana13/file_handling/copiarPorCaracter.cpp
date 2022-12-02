@@ -12,9 +12,9 @@ int main () {
     ofstream destination("dest-file.txt");
     /* TODO: copiar por caracter... esta copia por linea :/ */
     while(!source.eof()) {
-        string linea;
-        getline(cin, linea);
-        destination << endl;
+        char linea;
+        linea = getchar();
+        
     }
 
     }
